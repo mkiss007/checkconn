@@ -67,7 +67,3 @@ def wheather():
     my_html = current_wheather
     return(my_html)	
 	
-
-	
-if __name__ == '__main__':
-   app.run()	
