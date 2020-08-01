@@ -1,5 +1,6 @@
 import requests
 import socket
+import os
 from flask import Flask,render_template, request, Response
 
 
@@ -66,4 +67,8 @@ def wheather():
     current_wheather = response.text
     my_html = current_wheather
     return(my_html)	
-	
+
+@app.route('/env', methods=['GET'])
+def env():
+    my_return = os.environ	
+    return(my_return)
