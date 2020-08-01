@@ -1,6 +1,7 @@
 import requests
 import socket
 import os
+import time
 from flask import Flask,render_template, request, Response
 
 
@@ -70,5 +71,5 @@ def wheather():
 
 @app.route('/env', methods=['GET'])
 def env():
-    my_return = os.environ	
+    my_return = time.strftime("%Y-%m-%d %H:%M:%S-%Z-%z")
     return(my_return)
